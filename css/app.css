@@ -20,6 +20,9 @@ a{
     margin-bottom: 0;
     margin-left: auto;
 }
+img{
+    max-width: 100%;
+}
 
 /* Header y Nav*/
 .nombre-sitio{
@@ -33,6 +36,8 @@ a{
 .nav-principal{
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .hero{
     background-image: url(../img/principal.jpg);
@@ -40,4 +45,11 @@ a{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+}
+/**categorias**/
+.listado-categorias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /** version corta:  grid-template-columns: repeat(3, 1fr);**/
+    gap: 20px; /** gap es la separacion de los objetos tanto de lado y arriba abajo **/ 
+    
 }
