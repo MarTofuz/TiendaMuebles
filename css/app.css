@@ -1,20 +1,40 @@
 html {
     box-sizing: border-box;
+    font-size: 65.5%; /* 1REM = 10px */
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
 /* Globales */
 
+h1,h2,h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 0 5rem 0;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 3rem;
+}
 a{
     text-decoration: none;
     color: #000;
 }
 .contenedor-navegacion{
-    border-top: 1px solid #e1e1e1;
+    border-top: .1rem solid #e1e1e1;
 }
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -22,34 +42,173 @@ a{
 }
 img{
     max-width: 100%;
+    display: block;
+}
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+.btn:hover{
+    background-color: #769c02;
 }
 
 /* Header y Nav*/
 .nombre-sitio{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
     text-align:  center;
 }
 .nombre-sitio span{
     color: #037bc0;
 }
 .nav-principal{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     justify-content: space-between;
 }
 .hero{
     background-image: url(../img/principal.jpg);
-    height: 550px;
+    height: 55rem;
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center;
+    background-position: center center;
 }
 /**categorias**/
+.categorias{
+    padding-top: 5rem;
+}
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #ffffff;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
 .listado-categorias{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /** version corta:  grid-template-columns: repeat(3, 1fr);**/
-    gap: 20px; /** gap es la separacion de los objetos tanto de lado y arriba abajo **/ 
-    
+    gap: 2rem; /** gap es la separacion de los objetos tanto de lado y arriba abajo **/     
+}
+/* Sobre nosotros */
+.sobre-nosotros{
+    background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%,120rem;
+}
+.sobre-nosotros-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15%;
+}
+.texto-nosotros{
+    grid-column: 2/3;
+    color:#fff;
+}
+/* Utilidades */
+.text-center{
+    text-align: center;
+}
+/* listado de productos */
+.contenido-principal{
+    padding-top: 5rem;
+}
+.listado-productos{
+    display:grid;
+    grid-template-columns: repeat(6 , 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.listado-productos> div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.listado-productos> div:nth-child(1) img{
+    height: 44rem;
+    width: 100%;
+    object-fit: cover;
+}
+.listado-productos> div:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.listado-productos> div:nth-child(2) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.listado-productos> div:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.listado-productos> div:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.listado-productos> div:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.listado-productos> div:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.listado-productos> div:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.producto{
+    background-color: #037bc0;
+}
+.texto-producto{
+    text-align: center;
+    color: #ffffff;
+    background-color: #037bc0;
+    padding: 2rem;
+}
+.texto-producto h3{
+    margin:0;
+}
+.texto-producto .precio{
+    font-size: 4rem;
+}
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+/** Footer **/
+.site-footer{
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3{
+    margin-bottom: .5rem;
+}
+.grid-footer{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 2rem;
+}
+.footer-menu a{
+    display: block;
+}
+.copyright{
+    margin-top: 5rem;
+    text-align: center;
 }
